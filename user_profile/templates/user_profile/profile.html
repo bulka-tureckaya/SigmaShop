@@ -1,0 +1,13 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block content %}
+<div class="profile-container">
+    <div class="profile-info">
+        <h2>Personal account</h2>
+        <p>First name: {{ current_user.first_name }}</p>
+        <p>Last name: {{ current_user.last_name }}</p>
+        <p>Email: {{ current_user.email }}</p>
+        <a href="{% url 'user_profile:edit' %}" class="btn btn-primary">Edit profile</a>
+    </div>
+</div>
+{% endblock %}

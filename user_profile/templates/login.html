@@ -1,0 +1,30 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+    </head>
+    <body class = 'body'>
+        <header class = 'header'>
+            <div class = 'navbar'>
+                <a href = '/'>Shop</a>
+                {% if user.is_authenticated %} 
+                <a href = "/profile/user_profile/">Profile</a>
+                {%endif%}
+                {% if request.user.is_staff %} 
+                <a href = "/order">Orders</a>
+                {%endif%}
+            </div>
+        </header>
+        <main class = "fire_main">
+            <h1>Login</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <h3>New here? <a href="/profile/signup/">Sign up</a>!</h3>
+                <button type="submit", class="button">Enter</button>
+            </form>
+        </main>
+    </body>
+{% endblock %}

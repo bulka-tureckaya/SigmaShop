@@ -1,0 +1,12 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="profile-info">
+        <h2>Personal account</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save changes</button>
+        </form>
+    </div>
+{% endblock %}

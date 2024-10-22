@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}SIGMA SHOP{% endblock %}</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+        <a href="/" class="logo">SIGMA SHOP</a>
+    </div>
+    <div id="subheader">
+      <a href="{% url 'user_profile:profile' %}" class="profile">Profile</a>
+      {% block content1 %}
+        {% if user.is_authenticated %}
+         {{ user.username }}
+        <form action="{% url 'user_profile:logout' %}" method="post">
+          {% csrf_token %}
+          <button type="submit" class="button" style = "text-align: right;">Log Out</button>
+        </form>
+        {% else %}
+        <p>You are not logged in <a href="{% url 'user_profile:login' %}"> Log In</a></p>
+        {% endif %}
+        {% endblock %}
+      <div class="cart">
+        {% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+        In your cart:
+        <a href="{% url 'cart:cart_detail' %}">{{ total_items }}x ,${{ cart.get_total_price }}</a>
+        {% else %}
+        Your cart is empty.
+        {% endif %}
+        {% endwith %}
+      </div>
+    </div>
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

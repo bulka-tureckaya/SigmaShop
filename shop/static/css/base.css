@@ -1,0 +1,379 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #fff9e5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    color: hsl(45, 93%, 17%);
+}
+
+a {
+    text-decoration: none;
+    color: hwb(48 4% 48%);
+}
+
+a:hover {
+    color: hsl(48, 100%, 32%); 
+}
+
+a.button, input[type="submit"] {
+    color: #fff;
+    background: hsl(48, 100%, 32%); 
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 14px;
+    border: 0;
+}
+
+a.button.light {
+    color: #333;
+    background: #fff2cc;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: left;
+    font-size: 14px;
+    padding: 20px;
+    margin: 0;
+}
+
+tbody tr:nth-child(odd) {
+    background: #ffe6cc;
+}
+
+tbody tr.subtotal {
+    background: #ffdb99;
+}
+
+thead th, tbody tr.total {
+    background: #ffcc00;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+table.cart {
+    margin-bottom: 40px;
+}
+
+table.cart img {
+    width: 180px;
+}
+
+tbody td.num {
+    text-align: right;
+}
+
+td input[type="submit"] {
+    font-size: 12px;
+    padding: 4px 12px;
+}
+
+form p label, form p input {
+    float: left;
+    clear: both;
+}
+
+form p label {
+    font-size: 21px;
+    padding-bottom: 4px;
+}
+
+form p input {
+    width: 300px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    background: #ffffff;
+    color: #333;
+    border-radius: 5px;
+}
+
+ul.errorlist {
+    float: left;
+    color: #ff0000;
+    clear: both;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    padding: 15px 100px;
+    font-size: 18px;
+    overflow: auto;
+}
+
+#subheader {
+    color: #333;
+    padding: 15px 100px;
+    overflow: auto;
+    font-size: 21px;
+}
+
+#header, #subheader {
+    background: #ffdb99;
+    color: #333;
+}
+
+#header .logo {
+    font-family: 'Arial', sans-serif;
+    float: left;
+    color: #333;
+    font-size: 21px;
+    margin-right: 10%;
+}
+
+#subheader .cart {
+    float: right;
+    padding-top: 4px;
+}
+
+#header .logo, #subheader .cart {
+    color: #463609;
+}
+
+#content {
+    padding: 0 100px;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 220px;
+    padding: 30px 20px 0 0;
+    float: left;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin: 0;
+    list-style: none;
+    padding: 10px 14px;
+}
+
+#sidebar ul li a {
+    display: block;
+}
+
+#sidebar ul li.selected {
+    background: #aa9104;
+    border-radius: 5px;
+}
+
+#sidebar ul li.selected a {
+    color: #fff;
+}
+
+#main {
+    float: left;
+    width: 96%;
+    margin-right: -220px;
+    overflow: hidden;
+}
+
+.product-list .item {
+    width: 25%;
+    padding: 10px 20px 10px 0;
+    float: left;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.product-list .item img {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 8px;
+}
+
+.product-detail {
+    float: inline-start;
+    text-align: justify;
+}
+
+.product-detail .price {
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.product-detail img {
+    width: 400px;
+    height: 300px;
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+.product-detail h1 {
+    margin-bottom: 0;
+}
+
+.product-detail h2 {
+    margin-top: 10px;
+}
+
+.order-form {
+    float: left;
+}
+
+.order-info {
+    float: right;
+    width: 300px;
+    padding: 10px 20px;
+    color: #333;
+    background: #ffe6cc;
+    border-bottom: 4px solid #ffcc00;
+}
+
+.order-info h3 {
+    color: #ffbf00;
+}
+
+.order-info ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.order-info p {
+    font-weight: bold;
+    float: right;
+}
+
+.order-info span {
+    float: right;
+}
+
+.neg {
+    color: #dc1616;
+}
+
+.languages {
+    float: right;
+    padding-top: 4px;
+    font-size: 14px;
+}
+
+.languages ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.languages ul li {
+    float: left;
+    margin: 0 0 0 10px;
+    font-size: 14px;
+}
+
+.languages p {
+    float: left;
+    margin: 0;
+}
+
+.recommendations {
+    clear: both;
+}
+
+.recommendations div {
+    float: left;
+}
+
+.recommendations img {
+    width: 200px
+}
+
+.recommendations p {
+    clear: both;
+}
+
+.recommendations.cart {
+    width: 60%;
+    float: left;
+    overflow: auto;
+}
+
+.recommendations.cart h3 {
+    margin-top: 0;
+}
+
+.recommendations.cart .item {
+    margin-right: 10px;
+}
+
+.recommendations.cart img {
+    width: 120px;
+}
+
+/* braintree hosted fields */
+form div.field {
+    font-size: 13px;
+    color: #666;
+    width: 300px;
+    height: 22px;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.profile {
+    margin-right: 0;
+    padding-right: 0;
+    clear: right;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-info {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px;
+}
+
+.profile-orders {
+    margin-top: 20px;
+}
+
+.profile-orders h3 {
+    margin-bottom: 10px;
+}
+
+.profile-orders ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-orders li {
+    margin-bottom: 5px;
+}
